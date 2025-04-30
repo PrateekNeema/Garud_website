@@ -3997,3 +3997,92 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+
+/*------------------------------------------------------------------
+  Team Section Styles
+-------------------------------------------------------------------*/
+
+/* Container for all team cards */
+.team-container {
+    margin-top: 2em; /* Add some space below the heading */
+    margin-bottom: 2em; /* Add some space before the next section */
+}
+
+/* Individual team member card */
+.team-member-card {
+    display: flex;          /* Enable flexbox layout */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 2.5em;   /* Space between cards */
+    padding: 1.5em;         /* Padding inside the card */
+    background-color: #f9f9f9; /* Optional: light background for the card */
+    border: 1px solid #eee; /* Optional: subtle border */
+    border-radius: 8px;     /* Optional: rounded corners */
+    overflow: hidden;       /* Ensures content stays within borders */
+}
+
+/* Container for the photo */
+.team-photo {
+    flex: 0 0 25%;
+    max-width: 300px;
+    margin-right: 1.5em;  /* Space between photo and text */
+}
+
+/* Styling for the actual image */
+.team-photo img {
+    width: 100%;          /* Make image fill its container */
+    height: auto;         /* Maintain aspect ratio */
+    /*border-radius: 50%;   /* Make the image circular (optional) */
+    border-radius: 8px;  /* Alternative: Slightly rounded square corners */
+    display: block;       /* Remove extra space below image */
+}
+
+/* Container for the text information */
+.team-info {
+    flex: 1;              /* Allow text info to take up remaining space */
+}
+
+/* Styling for the team member's name */
+.team-info h3 {
+    margin-top: 0;        /* Remove default top margin */
+    margin-bottom: 0.25em; /* Space below name */
+    color: #333; /* Darker color for name */
+}
+
+/* Styling for the team member's title */
+.team-info h4 {
+    margin-top: 0;
+    margin-bottom: 0.75em; /* Space below title */
+    font-size: 1em;
+    font-weight: bold;
+    color: #555; /* Slightly lighter color for title */
+}
+
+/* Styling for the description paragraph */
+.team-info p {
+    margin-bottom: 0;     /* Remove default bottom margin if it's the last element */
+    line-height: 1.6;
+}
+
+/* Responsive adjustments (Optional Example) */
+@media (max-width: 736px) { /* Adjust breakpoint as needed (matches Spectral template) */
+    .team-member-card {
+        flex-direction: column; /* Stack photo and info vertically */
+        align-items: center;    /* Center items */
+        text-align: center;     /* Center text */
+    }
+
+    .team-photo {
+        margin-right: 0;        /* Remove right margin */
+        margin-bottom: 1em;     /* Add space below photo */
+        flex-basis: 120px;      /* Adjust photo size for smaller screens if needed */
+        width: 120px;           /* Explicit width might be needed */
+    }
+
+    .team-info h3, .team-info h4 {
+         text-align: center; /* Ensure headings are centered */
+    }
+}
+
+
+
